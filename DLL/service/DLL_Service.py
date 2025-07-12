@@ -161,7 +161,11 @@ class DoublyLinkedList:
         while temp is not None:
             print(f'{temp.value}->',end="")
             temp = temp.next
-
-dll = DoublyLinkedList([1,2,3,4,5,6])
-dll.reverse()
-dll.print_list()
+    
+    def get_list(self):
+        out = []
+        temp = self.head
+        while temp is not None:
+            out.append(temp.value)
+            temp = temp.next
+        return out
