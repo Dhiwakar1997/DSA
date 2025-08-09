@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import "./LinkedListVisualizer.css";
-import { dllApi, DllList } from "../services/dllApi";
+import { dllApi, DllList } from "../../services/dllApi";
 
 function useRemoteDll(initial: DllList = [1, 2, 3]) {
   const [list, setList] = useState<DllList>(initial);
