@@ -18,14 +18,6 @@ const Home: React.FC = () => {
         <Link to="/projects" className="btn btn-primary">
           Explore Data Structures
         </Link>
-        <a
-          href="https://designs-by-dhiwakar.web.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn btn-secondary"
-        >
-          View Portfolio
-        </a>
       </div>
 
       <div className="page-container" style={{ marginTop: "60px" }}>
@@ -208,6 +200,18 @@ const Home: React.FC = () => {
             </span>
           </div>
         </div>
+      </div>
+
+      <div style={{ marginTop: "10px", textAlign: "center" }}>
+        <a
+          href="https://designs-by-dhiwakar.web.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-secondary"
+          style={{ fontSize: "1.1rem", padding: "14px 28px" }}
+        >
+          Old Portfolio →
+        </a>
       </div>
     </div>
   );

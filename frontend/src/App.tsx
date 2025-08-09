@@ -1,11 +1,11 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import LinkedListPage from './pages/LinkedListPage';
-import Projects from './pages/Projects';
-import { ThemeProvider } from './context/ThemeContext';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import LinkedListPage from "./pages/LinkedListPage";
+import Projects from "./pages/Projects";
+import { ThemeProvider } from "./context/ThemeContext";
 
 function App() {
   return (
