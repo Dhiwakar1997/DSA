@@ -1,7 +1,7 @@
 __author__ = "Dhiwakar"
 
 from flask import make_response, jsonify, g, request, Blueprint
-from DLL.service.DLL_Service import DoublyLinkedList
+from ..service.DLL_Service import DoublyLinkedList
 
 DLL_app = Blueprint('DLL', __name__)
 
