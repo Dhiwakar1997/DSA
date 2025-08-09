@@ -1,0 +1,31 @@
+.footer {
+  grid-row: 3/4;
+  grid-column: center-start/center-end;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  &__button {
+    font-size: 2rem;
+    font-weight: 400;
+    width: 20rem;
+    height: 5rem;
+    background-color: #fff;
+    border: none;
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    border-radius: 20rem;
+    padding: 0px;
+  }
+  &__icon {
+    align-self: center;
+    justify-self: end;
+    height: 5rem;
+  }
+  .bluebtn {
+    background-color: rgb(26, 238, 227);
+    color: #fff;
+    justify-self: start;
+  }
+}

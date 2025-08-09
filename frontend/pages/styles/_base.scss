@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+*:focus {
+  outline: none;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 55%;
+  }
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 45%;
+  }
+  @media only screen and (max-width: $bp-small) {
+    font-size: 40%;
+  }
+}
+
+body {
+  font-family: Poppins;
+  color: #000000;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.container {
+  display: grid;
+  background-image: linear-gradient(
+    to bottom right,
+    #f07878,
+    rgb(198, 104, 226)
+  );
+  grid-template-rows: 15vh 1fr;
+  grid-template-columns:
+    [ full-start] minmax(6rem, 1fr)
+    [center-start] repeat(8, [col-start] minmax(min-content, 20rem) [col-end])
+    [center-end] minmax(6rem, 1fr) [full-end];
+}
+.title {
+  grid-row: 1/2;
+  grid-column: center-start/center-end;
+  text-align: center;
+  align-self: center;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#8f27e4),
+    to(#1392e7)
+  );
+  background-image: linear-gradient(to right, #8f27e4, #1392e7);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 4rem;
+}
+.gallery {
+  grid-row: 2/3;
+  grid-column: center-start/center-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60rem, 1fr));
+  grid-gap: 4rem;
+  align-items: center;
+  justify-items: center;
+  padding-bottom: 3rem;
+
+  &__img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+}

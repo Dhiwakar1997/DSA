@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+*:focus {
+  outline: none;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 55%;
+  }
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 45%;
+  }
+  @media only screen and (max-width: $bp-small) {
+    font-size: 40%;
+  }
+}
+
+body {
+  font-family: Open Sans;
+  color: #000000;
+  font-weight: 300;
+  line-height: 1.6;
+  background-image: linear-gradient(to right, #e0e0e0, #fff);
+}
+
+.container {
+  display: grid;
+
+  grid-template-rows: 8vh 84vh 8vh;
+  grid-template-columns:
+    [ full-start] minmax(6rem, 1fr)
+    [center-start] repeat(8, [col-start] minmax(min-content, 20rem) [col-end])
+    [center-end] minmax(6rem, 1fr) [full-end];
+}

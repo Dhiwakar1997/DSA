@@ -1,0 +1,223 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media only screen and (max-width: 62.5em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  html {
+    font-size: 45%;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 40%;
+  }
+}
+
+body {
+  font-family: Ubuntu;
+  color: #000000;
+  font-weight: 300;
+  line-height: 1.6;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#deeb2154), to(#f50b0b57)), url(../img/ladakh_ride.jpg);
+  background-image: linear-gradient(to bottom right, #deeb2154, #f50b0b57), url(../img/ladakh_ride.jpg);
+  background-size: cover;
+  background-position: bottom;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 15vh 70vh 15vh;
+      grid-template-rows: 15vh 70vh 15vh;
+  -ms-grid-columns: [full-start] minmax(6rem, 1fr) [center-start] ([col-start] minmax(min-content, 20rem) [col-end])[8] [center-end] minmax(6rem, 1fr) [full-end];
+      grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 20rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+      grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 20rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  grid-column: center-start/center-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 15% 60% 25%;
+      grid-template-columns: 15% 60% 25%;
+}
+
+.header__icon {
+  color: #fff;
+  width: 6rem;
+  -ms-grid-column-align: start;
+      justify-self: start;
+}
+
+.header__nav {
+  color: #fff;
+  font-size: 2rem;
+  -ms-grid-row-align: center;
+      align-self: center;
+  display: -ms-grid;
+  display: grid;
+  list-style-type: none;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+.header__lang {
+  color: #fff;
+  font-size: 2rem;
+  width: 70%;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header__lang--1 {
+  text-decoration: underline;
+}
+
+.header__lang--icon {
+  width: 3rem;
+}
+
+.footer {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  grid-column: center-start/center-end;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -ms-grid-columns: 1fr 2fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__button {
+  font-size: 2rem;
+  font-weight: 400;
+  width: 20rem;
+  height: 5rem;
+  background-color: #fff;
+  border: none;
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  border-radius: 20rem;
+  padding: 0px;
+}
+
+.footer__icon {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  height: 5rem;
+}
+
+.footer .bluebtn {
+  background-color: #1aeee3;
+  color: #fff;
+  -ms-grid-column-align: start;
+      justify-self: start;
+}
+
+.content {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  grid-column: center-start/center-end;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr;
+      grid-template-columns: 1fr 4fr;
+}
+
+.content__roller {
+  display: -ms-grid;
+  display: grid;
+  width: 50%;
+  height: 80%;
+  -ms-grid-rows: 5% 85% 5% 5%;
+      grid-template-rows: 5% 85% 5% 5%;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+.content__roller--line {
+  height: 100%;
+}
+
+.content__roller--ellipse2 {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.content__text {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.content__text--title {
+  font-size: 7rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.content__text--description {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.733);
+}
+/*# sourceMappingURL=main.css.map */

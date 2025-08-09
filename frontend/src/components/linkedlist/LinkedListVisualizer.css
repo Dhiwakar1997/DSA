@@ -14,27 +14,34 @@
 
 .llv-controls input {
   padding: 8px 10px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--card-border, #ddd);
   border-radius: 6px;
   width: 140px;
+  background: var(--card-bg, #ffffff);
+  color: var(--text-primary, #333);
+}
+
+.llv-controls input::placeholder {
+  color: var(--text-secondary, #666);
 }
 
 .llv-controls button {
   padding: 8px 12px;
-  border: 1px solid #ccc;
-  background: #f7f7f7;
+  border: 1px solid var(--card-border, #ccc);
+  background: var(--card-bg, #f7f7f7);
   border-radius: 6px;
   cursor: pointer;
+  color: var(--text-primary, #333);
 }
 
 .llv-viewport {
   padding: 16px;
-  border: 1px dashed #ccc;
+  border: 1px dashed var(--card-border, #ccc);
   border-radius: 8px;
   height: 25vh; /* 25% of screen height */
   width: 100%;
   max-width: none;
-  margin: 0; /* sit directly below create block */
+  margin: 0 0 60px 0; /* Added bottom margin to move controls lower */
   align-self: stretch; /* full width */
   display: flex;
   align-items: center;
@@ -44,7 +51,7 @@
 }
 
 .llv-viewport .empty {
-  color: #888;
+  color: var(--text-secondary, #888);
 }
 
 .list {
@@ -80,18 +87,20 @@
 }
 
 .llv-meta {
-  color: #555;
+  color: var(--text-secondary, #555);
   align-self: center;
+  margin-top: -2%; /* Moved up by 2% */
 }
 
 .llv-controls {
   margin-top: auto;
   position: sticky;
-  bottom: 10vh;
-  background: #ffffff;
+  bottom: 5vh; /* Moved down by 5% (from 10vh to 5vh) */
+  background: var(--card-bg, #ffffff);
   padding: 16px 20px;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--card-border, #eee);
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.04);
+  border-radius: 16px; /* Added border radius to all corners */
 }
 
 .llv-controls .row {
@@ -105,7 +114,7 @@
   gap: 20px;
   flex-wrap: nowrap;
   align-items: center;
-  margin-bottom: 4%;
+  margin-bottom: 3%; /* Increased spacing by 2% (from 1% to 3%) */
 }
 
 .llv-controls .field {
@@ -117,7 +126,7 @@
 
 .llv-controls .field label {
   font-size: 12px;
-  color: #555;
+  color: var(--text-secondary, #555);
   white-space: nowrap;
 }
 
@@ -127,29 +136,32 @@
   justify-content: flex-end;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 0 0 4px; /* hug the viewport closely */
-  padding: 6px 0; /* minimal padding, no card */
-  background: transparent;
-  border: none;
-  box-shadow: none;
+  margin: 5vh 0 4px; /* Moved down by 5% (added 5vh top margin) */
+  padding: 16px 20px; /* Added padding for the block */
+  border-radius: 16px; /* Added border radius */
 }
 
 .llv-create input {
   height: 38px;
   padding: 8px 12px;
-  border: 1px solid #d0d7e2;
-  background: #ffffff;
+  border: 1px solid var(--card-border, #d0d7e2);
+  background: var(--card-bg, #ffffff);
   border-radius: 10px;
   width: 260px;
   max-width: 60vw;
   font-size: 14px;
   transition: border-color 120ms ease, box-shadow 120ms ease;
+  color: var(--text-primary, #333);
+}
+
+.llv-create input::placeholder {
+  color: var(--text-secondary, #666);
 }
 
 .llv-create input:focus {
   outline: none;
-  border-color: #2d6cdf;
-  box-shadow: 0 0 0 3px rgba(45, 108, 223, 0.15);
+  border-color: var(--card-border, #d0d7e2);
+  box-shadow: none;
 }
 
 .llv-create button {

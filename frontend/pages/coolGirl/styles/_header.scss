@@ -1,0 +1,51 @@
+.header {
+  grid-row: 1/2;
+  grid-column: center-start/center-end;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: 1fr;
+  align-items: center;
+
+  &__logo {
+    width: 100%;
+  }
+  &__nav {
+    display: grid;
+    margin-right: 25%;
+    margin-left: 3rem;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    a:link,
+    a:visited {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #000;
+      font-size: 2rem;
+      font-weight: 400;
+    }
+  }
+  &__signup {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    white-space: nowrap;
+
+    &--area {
+      transform: translateY(6px);
+      &-text {
+        color: #000;
+        font-size: 2rem;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+      &-line {
+        width: 6rem;
+        transform: translateX(1rem) translateY(-1rem);
+      }
+    }
+    &--logo {
+      margin-left: 1rem;
+      height: 4rem;
+      transform: translateY(4px);
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.content {
+  grid-row: 2/3;
+  grid-column: center-start/center-end;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  &__roller {
+    display: grid;
+    width: 50%;
+    height: 80%;
+    grid-template-rows: 5% 85% 5% 5%;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    align-items: center;
+    justify-items: center;
+    &--line {
+      height: 100%;
+    }
+    &--ellipse2 {
+      transform: scale(0.8);
+    }
+  }
+  &__text {
+    align-self: center;
+    &--title {
+      font-size: 7rem;
+      font-weight: 600;
+      color: #fff;
+    }
+    &--description {
+      font-size: 2.5rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.733);
+    }
+  }
+}

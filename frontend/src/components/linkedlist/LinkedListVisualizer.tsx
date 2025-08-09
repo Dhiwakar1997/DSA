@@ -97,8 +97,6 @@ export default function LinkedListVisualizer() {
 
   return (
     <div className="llv-container">
-      <h2>Linked List Visualizer</h2>
-
       <div className="llv-create">
         <input
           id="seed-input"
