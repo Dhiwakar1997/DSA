@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import './Navbar.css';
-import { useTheme } from '../context/ThemeContext';
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import "./Navbar.css";
+import { useTheme } from "../context/ThemeContext";
 
 const Navbar: React.FC = () => {
   const location = useLocation();
@@ -15,37 +15,33 @@ const Navbar: React.FC = () => {
         </Link>
         <ul className="nav-menu">
           <li className="nav-item">
-            <Link 
-              to="/" 
-              className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}
+            <Link
+              to="/"
+              className={`nav-link ${
+                location.pathname === "/" ? "active" : ""
+              }`}
             >
               Home
             </Link>
           </li>
           <li className="nav-item">
-            <Link 
-              to="/projects" 
-              className={`nav-link ${location.pathname === '/projects' ? 'active' : ''}`}
+            <Link
+              to="/projects"
+              className={`nav-link ${
+                location.pathname === "/projects" ? "active" : ""
+              }`}
             >
               Projects
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link 
-              to="/linkedlist" 
-              className={`nav-link ${location.pathname === '/linkedlist' ? 'active' : ''}`}
-            >
-              LinkedList Demo
             </Link>
           </li>
         </ul>
         <button
           aria-label="Toggle theme"
-          title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+          title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
           className="theme-toggle"
           onClick={toggleTheme}
         >
-          {theme === 'light' ? '🌙' : '☀️'}
+          {theme === "light" ? "🌙" : "☀️"}
         </button>
       </div>
     </nav>
