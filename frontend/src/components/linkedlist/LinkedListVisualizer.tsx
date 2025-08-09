@@ -154,7 +154,7 @@ export default function LinkedListVisualizer() {
       <div className="llv-controls">
         <div className="row fields">
           <div className="field">
-            <label htmlFor="value-input">Value</label>
+            <label htmlFor="value-input">Value:</label>
             <input
               id="value-input"
               aria-label="value"
@@ -164,7 +164,7 @@ export default function LinkedListVisualizer() {
             />
           </div>
           <div className="field">
-            <label htmlFor="index-input">Index</label>
+            <label htmlFor="index-input">Index:</label>
             <input
               id="index-input"
               aria-label="index"

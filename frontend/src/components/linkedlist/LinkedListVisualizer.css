@@ -32,6 +32,48 @@
   border-radius: 6px;
   cursor: pointer;
   color: var(--text-primary, #333);
+  transition: background-color 160ms ease, border-color 160ms ease,
+    color 160ms ease, transform 120ms ease, box-shadow 160ms ease;
+  will-change: transform, box-shadow;
+}
+
+.llv-controls button:hover {
+  /* Light, contrasting background with subtle violet tint */
+  background: linear-gradient(135deg, #ffffff 0%, #f3edff 100%);
+  border-color: rgba(124, 58, 237, 0.45); /* purple accent */
+  color: var(--text-strong, #1f1147); /* darker text */
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.llv-controls button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.llv-controls button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.35);
+}
+
+.llv-controls button:disabled,
+.llv-controls button[disabled] {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Optional: improve contrast in dark mode */
+:root[data-theme="dark"] .llv-controls button {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-primary, #faf7ff);
+}
+
+:root[data-theme="dark"] .llv-controls button:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(196, 181, 253, 0.55);
+  color: var(--text-strong, #faf7ff);
 }
 
 .llv-viewport {
@@ -125,7 +167,7 @@
 }
 
 .llv-controls .field label {
-  font-size: 12px;
+  font-size: 0.95rem;
   color: var(--text-secondary, #555);
   white-space: nowrap;
 }

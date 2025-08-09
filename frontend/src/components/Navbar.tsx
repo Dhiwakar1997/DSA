@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
     <nav className="navbar">
       <div className="nav-container">
         <Link to="/" className="nav-logo">
-          DSA Portfolio
+          DNR Portfolio
         </Link>
         <ul className="nav-menu">
           <li className="nav-item">

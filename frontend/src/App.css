@@ -17,8 +17,8 @@
   --purple-700: #6d28d9;
 
   --bg: linear-gradient(135deg, #8076f8 0%, #7c3aed 100%);
-  --surface: rgba(255, 255, 255, 0.95);
-  --surface-muted: rgba(255, 255, 255, 0.6);
+  --surface: #ffffff; /* solid surface to remove glass effect */
+  --surface-muted: #ffffff; /* solid surface (no translucency) */
   --text-strong: #1f1147;
   --text-primary: rgba(31, 17, 71, 0.85);
   --text-secondary: rgba(31, 17, 71, 0.65);
@@ -43,7 +43,7 @@
 /* Dark theme */
 :root[data-theme="dark"] {
   --bg: linear-gradient(135deg, #1b1734 0%, #2a145e 100%);
-  --surface: rgba(20, 16, 36, 0.85);
+  --surface: #1b1734; /* solid dark surface */
   --surface-muted: rgba(255, 255, 255, 0.06);
   --text-strong: #faf7ff;
   --text-primary: rgba(250, 247, 255, 0.92);
@@ -92,33 +92,94 @@
   text-align: center;
   padding: 100px 20px;
   color: var(--text-primary);
+  transform: translateY(-1%);
+}
+
+/* New: horizontally align avatar and name */
+.hero-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 1rem;
+  transform: translateY(-15%);
+}
+
+.hero-avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 3px solid rgba(255, 255, 255, 0.65);
+  box-shadow:
+    /* bright inner ring */ 0 0 0 3px rgba(255, 255, 255, 0.6),
+    /* purple glow */ 0 0 16px rgba(124, 58, 237, 0.55),
+    0 0 32px rgba(124, 58, 237, 0.35),
+    /* subtle drop shadow */ 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.hero-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bold-name {
+  font-weight: 900;
 }
 
 .hero h1 {
-  font-size: 3.25rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
-  font-weight: 800;
-  background: linear-gradient(45deg, var(--violet-50), var(--purple-200));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25),
+    0 6px 24px rgba(124, 58, 237, 0.45);
 }
 
+.hero-text {
+  text-align: left;
+}
+
+.hero-name {
+  margin: 0;
+  font-size: 1.28rem;
+  color: #ffffff;
+  display: inline-block; /* allow underline to match content width */
+}
+
+/* Accent underline for the name */
+.hero-name::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  margin: 8px 0 0 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--purple-500), var(--violet-300));
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.45);
+  transform: translateY(4%);
+}
+
+/* shimmer removed */
+
 .hero-subtitle {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin: 6px 0 0 0;
   color: var(--text-strong);
   opacity: 0.9;
+  transform: translateY(4%);
 }
 
 .hero-description {
   font-size: 1.1rem;
-  opacity: 0.9;
+  opacity: 1;
   max-width: 800px;
   margin: 0 auto 2rem;
-  line-height: 1.6;
-  color: var(--text-secondary);
+  line-height: 1.7;
+  color: var(--text-primary);
 }
 
 .hero p {
@@ -147,14 +208,15 @@
   cursor: pointer;
   text-decoration: none;
   transition: all 0.25s ease;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .btn-primary {
   background: var(--surface-muted);
   color: var(--text-strong);
   border: 2px solid rgba(139, 92, 246, 0.35);
-  backdrop-filter: blur(10px);
 }
 
 .btn-primary:hover {
@@ -185,7 +247,6 @@
   margin-top: 40px;
   margin-bottom: 40px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-  backdrop-filter: blur(10px);
 }
 
 .linkedlist-page {
@@ -365,13 +426,13 @@
 }
 
 .skill-tag {
-  background: linear-gradient(135deg, var(--purple-400), var(--violet-300));
-  color: white;
+  background: linear-gradient(135deg, var(--purple-600), var(--violet-800));
+  color: #ffffff;
   padding: 0.5rem 1rem;
   border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.25);
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
 }
 
 .project-card {
@@ -453,12 +514,25 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .hero-header {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-name::after {
+    margin: 8px auto 0;
+  }
+
   .hero h1 {
     font-size: 2.25rem;
   }
 
   .hero-subtitle {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   .hero-description {
