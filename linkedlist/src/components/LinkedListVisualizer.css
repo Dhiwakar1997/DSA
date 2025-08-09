@@ -1,0 +1,73 @@
+.llv-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+}
+
+.llv-controls .row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.llv-controls input {
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 140px;
+}
+
+.llv-controls button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  background: #f7f7f7;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.llv-viewport {
+  padding: 16px;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  min-height: 80px;
+}
+
+.llv-viewport .empty {
+  color: #888;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.node {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #2d6cdf;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.arrow {
+  font-size: 22px;
+  color: #2d6cdf;
+}
+
+.llv-meta {
+  color: #555;
+}
