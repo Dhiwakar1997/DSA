@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
+import { useTheme } from '../context/ThemeContext';
 
 const Navbar: React.FC = () => {
   const location = useLocation();
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <nav className="navbar">
@@ -37,6 +39,14 @@ const Navbar: React.FC = () => {
             </Link>
           </li>
         </ul>
+        <button
+          aria-label="Toggle theme"
+          title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+          className="theme-toggle"
+          onClick={toggleTheme}
+        >
+          {theme === 'light' ? '🌙' : '☀️'}
+        </button>
       </div>
     </nav>
   );

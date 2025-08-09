@@ -6,63 +6,57 @@ const Home: React.FC = () => {
     <div className="hero">
       <h1>Data Structures & Algorithms Portfolio</h1>
       <p>
-        Welcome to my interactive portfolio showcasing various data structures and algorithms 
-        implementations with visualizations. Explore different concepts through hands-on demos 
-        and understand how these fundamental computer science concepts work.
+        Explore interactive visualizations of core data structures and algorithms. Each tile links to a focused demo. More structures will be added across sprints.
       </p>
       <div className="hero-buttons">
         <Link to="/projects" className="btn btn-primary">
-          View All Projects
+          View All Tiles
         </Link>
         <Link to="/linkedlist" className="btn btn-secondary">
-          Try LinkedList Demo
+          Try a Demo
         </Link>
       </div>
       
       <div className="page-container" style={{ marginTop: '60px' }}>
-        <h2 className="page-title">Featured Implementations</h2>
+        <h2 className="page-title">Featured Tiles</h2>
         <div className="projects-grid">
           <div className="project-card">
             <h3>🔗 Doubly Linked List</h3>
             <p>
-              Interactive visualization of a doubly linked list with operations like insert, 
-              delete, reverse, and more. Features real-time API communication with a Python backend.
+              Minimal interactive linked list operations and visualization.
             </p>
             <Link to="/linkedlist" className="project-link">
-              Try Demo →
+              Open →
             </Link>
           </div>
           
           <div className="project-card">
             <h3>🌳 Binary Search Tree</h3>
             <p>
-              Visual representation of BST operations including insertion, deletion, 
-              and various traversal methods. (Coming Soon)
+              Insert, delete, and traverse a BST. (Coming soon)
             </p>
-            <span className="project-link" style={{ color: '#999', cursor: 'not-allowed' }}>
-              Coming Soon
+            <span className="project-link" style={{ color: 'var(--text-secondary)', cursor: 'not-allowed' }}>
+              Coming soon
             </span>
           </div>
           
           <div className="project-card">
             <h3>🔍 Sorting Algorithms</h3>
             <p>
-              Step-by-step visualization of popular sorting algorithms including 
-              Bubble Sort, Quick Sort, Merge Sort, and more.
+              Visualize classic sorts step by step. (Coming soon)
             </p>
-            <span className="project-link" style={{ color: '#999', cursor: 'not-allowed' }}>
-              Coming Soon
+            <span className="project-link" style={{ color: 'var(--text-secondary)', cursor: 'not-allowed' }}>
+              Coming soon
             </span>
           </div>
           
           <div className="project-card">
             <h3>📊 Graph Algorithms</h3>
             <p>
-              Interactive graph visualizations demonstrating pathfinding algorithms 
-              like Dijkstra's and A*, along with graph traversal methods.
+              Pathfinding and traversal demos. (Coming soon)
             </p>
-            <span className="project-link" style={{ color: '#999', cursor: 'not-allowed' }}>
-              Coming Soon
+            <span className="project-link" style={{ color: 'var(--text-secondary)', cursor: 'not-allowed' }}>
+              Coming soon
             </span>
           </div>
         </div>

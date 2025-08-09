@@ -3,9 +3,9 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--navbar-bg);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid var(--navbar-border);
   z-index: 1000;
   height: 80px;
   display: flex;
@@ -25,9 +25,9 @@
 .nav-logo {
   font-size: 1.8rem;
   font-weight: 700;
-  color: white;
+  color: var(--text-strong);
   text-decoration: none;
-  background: linear-gradient(45deg, #fff, #e3f2fd);
+  background: var(--logo-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -46,7 +46,7 @@
 }
 
 .nav-link {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--text-primary);
   text-decoration: none;
   font-weight: 500;
   font-size: 1.1rem;
@@ -57,14 +57,14 @@
 }
 
 .nav-link:hover {
-  color: white;
-  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-strong);
+  background: var(--link-hover-bg);
   transform: translateY(-1px);
 }
 
 .nav-link.active {
-  color: white;
-  background: rgba(255, 255, 255, 0.2);
+  color: var(--text-strong);
+  background: var(--link-active-bg);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -76,8 +76,27 @@
   transform: translateX(-50%);
   width: 6px;
   height: 6px;
-  background: white;
+  background: var(--text-strong);
   border-radius: 50%;
+}
+
+.theme-toggle {
+  margin-left: 1rem;
+  background: var(--toggle-bg);
+  border: 1px solid var(--toggle-border);
+  color: var(--text-strong);
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-1px);
 }
 
 /* Mobile Responsiveness */
