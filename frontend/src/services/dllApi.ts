@@ -13,8 +13,8 @@ export interface DllGetResponse extends DllResponseBase {
   get_item?: number;
 }
 
-// Use relative path so CRA dev server proxies to Flask and avoids CORS preflight
-const BASE_URL: string = process.env.REACT_APP_API_BASE_URL || "/DLL/v1";
+// Use environment variable for API URL, fallback to relative path for development
+const BASE_URL: string = process.env.REACT_APP_API_URL || "/DLL/v1";
 
 async function postJson<TResponse>(
   path: string,
