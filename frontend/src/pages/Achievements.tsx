@@ -148,7 +148,7 @@ Here's to setting even bigger goals for 2025 and continuing to make a positive i
                     <div key={index} className="image-container">
                       <img
                         src={image}
-                        alt={`Achievement photo ${index + 1}`}
+                        alt={`Achievement ${index + 1}`}
                         className="achievement-image"
                         loading="lazy"
                         onClick={() => openImageModal(image)}
@@ -180,7 +180,7 @@ Here's to setting even bigger goals for 2025 and continuing to make a positive i
               </button>
               <img
                 src={selectedImage}
-                alt="Full size achievement photo"
+                alt="Full size achievement"
                 className="modal-image"
               />
             </div>
