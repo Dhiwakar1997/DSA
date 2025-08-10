@@ -171,7 +171,9 @@
   color: var(--text-secondary, #555);
   white-space: nowrap;
 }
-
+.llv-controls .field input {
+  width: 5rem;
+}
 .llv-create {
   display: flex;
   align-items: center;
