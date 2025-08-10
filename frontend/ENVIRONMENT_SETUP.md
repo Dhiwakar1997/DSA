@@ -10,6 +10,8 @@ Create a `.env.local` file in the `frontend` directory with the following conten
 REACT_APP_API_URL=https://dsa-rkah.onrender.com
 ```
 
+**Note**: The `/DLL/v1` path prefix is automatically appended to your base URL in the code.
+
 ## Environment File Locations
 
 - `.env.local` - Local development (not committed to git)
