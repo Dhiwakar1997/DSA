@@ -529,7 +529,7 @@
   }
 
   .hero-avatar {
-    transform: translateY(20%);
+    transform: translateY(7.5%);
     width: 112px; /* Reduced by 30% from 160px */
     height: 112px; /* Reduced by 30% from 160px */
   }
