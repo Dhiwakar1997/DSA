@@ -161,10 +161,84 @@
   object-fit: cover;
   display: block;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .image-container:hover .achievement-image {
   transform: scale(1.05);
+}
+
+.image-container:hover::after {
+  content: "🔍 Click to view full size";
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+  z-index: 5;
+}
+
+/* Image Modal Styles */
+.image-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 2rem;
+  backdrop-filter: blur(5px);
+}
+
+.image-modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.modal-close-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
 .no-achievements {
@@ -244,7 +318,6 @@
   .images-grid {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 0.75rem;
-    grid-auto-rows: minmax(150px, auto);
   }
 
   .image-container:nth-child(1) {
@@ -265,6 +338,18 @@
   .image-container:nth-child(4) {
     grid-column: span 2;
     grid-row: span 1;
+  }
+
+  /* Mobile Modal Adjustments */
+  .image-modal-overlay {
+    padding: 1rem;
+  }
+
+  .modal-close-btn {
+    top: -40px;
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
   }
 }
 
@@ -307,7 +392,6 @@
   .images-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
-    grid-auto-rows: minmax(120px, auto);
   }
 
   .image-container:nth-child(1) {
@@ -328,5 +412,22 @@
   .image-container:nth-child(4) {
     grid-column: span 2;
     grid-row: span 1;
+  }
+
+  /* Small Mobile Modal Adjustments */
+  .image-modal-overlay {
+    padding: 0.5rem;
+  }
+
+  .modal-close-btn {
+    top: -35px;
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+
+  .image-container:hover::after {
+    font-size: 0.7rem;
+    padding: 6px 10px;
   }
 }
