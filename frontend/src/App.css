@@ -246,22 +246,22 @@
 .page-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 70px 40px;
   background: var(--surface);
   border-radius: 20px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
 
 .linkedlist-page {
   max-width: 1400px;
-  padding: 40px 30px;
+  padding: 70px 50px;
 }
 
 .page-title {
   font-size: 2.25rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3.5rem;
   color: var(--text-strong);
   text-align: center;
   background: linear-gradient(45deg, var(--purple-500), var(--violet-400));
@@ -274,30 +274,30 @@
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.25rem;
-  margin-top: 1rem;
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 1rem;
+  gap: 2.5rem;
+  margin-top: 2rem;
 }
 
 .experience-grid,
 .education-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .experience-card,
 .education-card {
   background: var(--card-bg);
-  border-radius: 14px;
-  padding: 1.5rem;
+  border-radius: 16px;
+  padding: 2rem;
   box-shadow: var(--card-shadow);
   border: 1px solid var(--card-border);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -313,15 +313,15 @@
 .education-header {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
 }
 
 .experience-header h3,
 .education-header h3 {
   color: var(--card-title);
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 600;
 }
 
@@ -329,7 +329,7 @@
 .experience-duration,
 .education-institution,
 .education-duration {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--text-secondary);
   font-weight: 500;
 }
@@ -342,16 +342,16 @@
 
 .experience-location,
 .education-location {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: var(--text-secondary);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .experience-description,
 .education-specialization {
   color: var(--text-primary);
-  line-height: 1.5;
-  margin: 0 0 0.75rem 0;
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
 }
 
 .experience-description:last-child {
@@ -362,21 +362,21 @@
   color: var(--text-secondary);
   line-height: 1.4;
   margin: 0;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 
 .experience-roles {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
 }
 
 .experience-role {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 0;
+  padding: 0.75rem 0;
   border-bottom: 1px solid var(--card-border);
 }
 
@@ -391,49 +391,49 @@
 .role-title {
   font-weight: 600;
   color: var(--text-primary);
-  font-size: 1rem;
+  font-size: 1.05rem;
 }
 
 .role-duration {
   color: var(--text-secondary);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 500;
 }
 
 .experience-role-intern .role-title {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--text-secondary);
 }
 
 .experience-role-intern .role-duration {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
 }
 
 .skill-category {
   background: var(--card-bg);
-  border-radius: 14px;
-  padding: 1.5rem;
+  border-radius: 16px;
+  padding: 2rem;
   box-shadow: var(--card-shadow);
   border: 1px solid var(--card-border);
 }
 
 .skill-category h3 {
   color: var(--card-title);
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.75rem;
 }
 
 .skill-tag {
   background: linear-gradient(135deg, var(--purple-600), var(--violet-800));
   color: #ffffff;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.2rem;
   border-radius: 20px;
   font-size: 0.9rem;
   font-weight: 600;
@@ -442,14 +442,14 @@
 
 .project-card {
   background: var(--card-bg);
-  border-radius: 14px;
-  padding: 1.25rem;
+  border-radius: 16px;
+  padding: 1.75rem;
   box-shadow: var(--card-shadow);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   border: 1px solid var(--card-border);
   display: flex;
   flex-direction: column;
-  min-height: 160px;
+  min-height: 180px;
 }
 
 .project-card:hover {
@@ -459,14 +459,14 @@
 
 .project-card h3 {
   color: var(--card-title);
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem;
 }
 
 .project-card p {
   color: var(--text-secondary);
-  line-height: 1.5;
-  margin-bottom: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
   font-size: 0.95rem;
 }
 
@@ -564,32 +564,40 @@
 
   .page-container {
     margin: 20px;
-    padding: 20px;
+    padding: 50px 25px;
+  }
+
+  .page-title {
+    margin-bottom: 2.5rem;
   }
 
   .projects-grid {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
   }
 
   .skills-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
   }
 
   .experience-grid,
   .education-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
   }
 
   .experience-roles {
-    gap: 0.25rem;
+    gap: 0.5rem;
   }
 
   .experience-role {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.25rem;
+    gap: 0.5rem;
   }
 }
 
