@@ -34,6 +34,16 @@ const Navbar: React.FC = () => {
               Projects
             </Link>
           </li>
+          <li className="nav-item">
+            <Link
+              to="/certificates"
+              className={`nav-link ${
+                location.pathname === "/certificates" ? "active" : ""
+              }`}
+            >
+              Certificates
+            </Link>
+          </li>
         </ul>
         <button
           aria-label="Toggle theme"

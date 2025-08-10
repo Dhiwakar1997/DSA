@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import LinkedListPage from "./pages/LinkedListPage";
 import Projects from "./pages/Projects";
+import Certificates from "./pages/Certificates";
 import { ThemeProvider } from "./context/ThemeContext";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/linkedlist" element={<LinkedListPage />} />
               <Route path="/projects" element={<Projects />} />
+              <Route path="/certificates" element={<Certificates />} />
             </Routes>
           </main>
         </div>
