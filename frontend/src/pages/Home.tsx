@@ -113,6 +113,49 @@ const Home: React.FC = () => {
       </div>
 
       <div className="page-container" style={{ marginTop: "40px" }}>
+        <h2 className="page-title">Data Structures</h2>
+        <div className="projects-grid home-data-structures">
+          <Link to="/linkedlist" className="project-card clickable-card">
+            <h3>🔗 Doubly Linked List</h3>
+            <p>
+              Interactive linked list with basic operations and visualization.
+            </p>
+            <span className="project-link">Try Demo →</span>
+          </Link>
+
+          <div className="project-card clickable-card coming-soon">
+            <h3>🌳 Binary Search Tree</h3>
+            <p>BST operations and traversals visualization.</p>
+            <span className="project-link">Coming Soon</span>
+          </div>
+
+          <div className="project-card clickable-card coming-soon">
+            <h3>🔍 Sorting Algorithms</h3>
+            <p>Visualize and compare sorting algorithms.</p>
+            <span className="project-link">Coming Soon</span>
+          </div>
+
+          <div className="project-card clickable-card coming-soon">
+            <h3>📊 Graph Algorithms</h3>
+            <p>Pathfinding and traversal in graphs.</p>
+            <span className="project-link">Coming Soon</span>
+          </div>
+
+          <div className="project-card clickable-card coming-soon">
+            <h3>🏔️ Heap</h3>
+            <p>Priority queue with heap operations.</p>
+            <span className="project-link">Coming Soon</span>
+          </div>
+
+          <div className="project-card clickable-card coming-soon">
+            <h3>🗂️ Hash Table</h3>
+            <p>Hashing and collision resolution strategies.</p>
+            <span className="project-link">Coming Soon</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="page-container" style={{ marginTop: "40px" }}>
         <h2 className="page-title">Work Experience</h2>
         <div className="experience-grid">
           <div className="experience-card">
@@ -199,76 +242,6 @@ const Home: React.FC = () => {
             <p className="education-location">Chennai, Tamil Nadu, India</p>
           </div>
         </div>
-      </div>
-
-      <div className="page-container" style={{ marginTop: "40px" }}>
-        <h2 className="page-title">Featured Data Structures</h2>
-        <div className="projects-grid">
-          <div className="project-card">
-            <h3>🔗 Doubly Linked List</h3>
-            <p>
-              Interactive visualization of doubly linked list operations with
-              real-time updates and performance metrics.
-            </p>
-            <Link to="/linkedlist" className="project-link">
-              Try Demo →
-            </Link>
-          </div>
-
-          <div className="project-card">
-            <h3>🌳 Binary Search Tree</h3>
-            <p>
-              Visualize BST operations including insertion, deletion, and
-              various traversal algorithms.
-            </p>
-            <span
-              className="project-link"
-              style={{ color: "var(--text-secondary)", cursor: "not-allowed" }}
-            >
-              Coming Soon
-            </span>
-          </div>
-
-          <div className="project-card">
-            <h3>🔍 Sorting Algorithms</h3>
-            <p>
-              Step-by-step visualization of classic sorting algorithms with
-              performance comparisons.
-            </p>
-            <span
-              className="project-link"
-              style={{ color: "var(--text-secondary)", cursor: "not-allowed" }}
-            >
-              Coming Soon
-            </span>
-          </div>
-
-          <div className="project-card">
-            <h3>📊 Graph Algorithms</h3>
-            <p>
-              Interactive graph traversal and pathfinding algorithms with visual
-              demonstrations.
-            </p>
-            <span
-              className="project-link"
-              style={{ color: "var(--text-secondary)", cursor: "not-allowed" }}
-            >
-              Coming Soon
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <div style={{ marginTop: "10px", textAlign: "center" }}>
-        <a
-          href="https://designs-by-dhiwakar.web.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn btn-secondary"
-          style={{ fontSize: "1.1rem", padding: "14px 28px" }}
-        >
-          Old Portfolio →
-        </a>
       </div>
     </div>
   );

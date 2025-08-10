@@ -5,8 +5,9 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import LinkedListPage from "./pages/LinkedListPage";
 import Projects from "./pages/Projects";
-import Achievements from "./pages/Achievements";
 import Certificates from "./pages/Certificates";
+import Achievements from "./pages/Achievements";
+import About from "./pages/About";
 import { ThemeProvider } from "./context/ThemeContext";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/achievements" element={<Achievements />} />
               <Route path="/certificates" element={<Certificates />} />
+              <Route path="/about" element={<About />} />
             </Routes>
           </main>
         </div>

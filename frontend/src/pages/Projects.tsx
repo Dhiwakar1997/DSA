@@ -82,44 +82,61 @@ const Projects: React.FC = () => {
         >
           🧮 Data Structures & Algorithms
         </h2>
-        <div className="projects-grid">
-          {dataStructuresProjects.map((project) => (
-            <div key={project.id} className="project-card">
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "flex-start",
-                  marginBottom: "0.5rem",
-                }}
+        <div className="projects-grid data-structures">
+          {dataStructuresProjects.map((project) =>
+            project.status === "completed" && project.link ? (
+              <Link
+                key={project.id}
+                to={project.link}
+                className="project-card clickable-card"
               >
-                <h3 style={{ margin: 0, flex: 1 }}>{project.title}</h3>
                 <div
-                  style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}
-                >
-                  {getStatusBadge(project.status)}
-                </div>
-              </div>
-
-              <p style={{ marginBottom: "0.75rem" }}>{project.description}</p>
-
-              {project.status === "completed" && project.link ? (
-                <Link to={project.link} className="project-link">
-                  Try Demo →
-                </Link>
-              ) : (
-                <span
-                  className="project-link"
                   style={{
-                    color: "var(--text-secondary)",
-                    cursor: "not-allowed",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "flex-start",
+                    marginBottom: "0.5rem",
                   }}
                 >
-                  Coming soon
-                </span>
-              )}
-            </div>
-          ))}
+                  <h3 style={{ margin: 0, flex: 1 }}>{project.title}</h3>
+                  <div
+                    style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}
+                  >
+                    {getStatusBadge(project.status)}
+                  </div>
+                </div>
+
+                <p style={{ marginBottom: "0.75rem" }}>{project.description}</p>
+
+                <span className="project-link">Try Demo →</span>
+              </Link>
+            ) : (
+              <div
+                key={project.id}
+                className="project-card clickable-card coming-soon"
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "flex-start",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  <h3 style={{ margin: 0, flex: 1 }}>{project.title}</h3>
+                  <div
+                    style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}
+                  >
+                    {getStatusBadge(project.status)}
+                  </div>
+                </div>
+
+                <p style={{ marginBottom: "0.75rem" }}>{project.description}</p>
+
+                <span className="project-link">Coming soon</span>
+              </div>
+            )
+          )}
         </div>
       </div>
     </div>

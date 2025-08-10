@@ -278,6 +278,152 @@
   margin-top: 2rem;
 }
 
+/* Data Structures Projects - Fixed 3 columns */
+.projects-grid.data-structures {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1000px;
+  margin: 2rem auto 0;
+  gap: 2rem;
+}
+
+.projects-grid.data-structures .project-card {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Home page data structures - horizontal scrollable */
+.projects-grid.home-data-structures {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.5rem;
+  padding: 1rem 0.5rem;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: var(--purple-400) transparent;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  /* Ensure proper container sizing */
+  width: 100%;
+  box-sizing: border-box;
+  /* Prevent any container overflow issues */
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.projects-grid.home-data-structures .project-card {
+  min-width: 280px;
+  max-width: 320px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Ensure proper spacing and prevent overlap */
+  margin: 0;
+  box-sizing: border-box;
+  /* Prevent any overflow issues */
+  overflow: hidden;
+}
+
+/* Clickable card styles for both home and projects pages */
+.clickable-card {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.clickable-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.clickable-card:active {
+  transform: translateY(-2px);
+  transition: transform 0.1s ease;
+}
+
+/* Coming soon cards - disabled state */
+.clickable-card.coming-soon {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.clickable-card.coming-soon:hover {
+  transform: none;
+  box-shadow: var(--card-shadow);
+}
+
+.clickable-card.coming-soon:active {
+  transform: none;
+}
+
+/* Link cards - ensure proper styling */
+.clickable-card.project-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.clickable-card.project-card:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.clickable-card.project-card:focus {
+  outline: 2px solid var(--purple-400);
+  outline-offset: 2px;
+}
+
+/* Ensure proper spacing and layout for clickable cards */
+.clickable-card .project-link {
+  margin-top: auto;
+  align-self: flex-end;
+}
+
+/* Add subtle border on hover for better visual feedback */
+.clickable-card:not(.coming-soon):hover {
+  border-color: var(--purple-400);
+}
+
+/* Improve accessibility for keyboard navigation */
+.clickable-card:focus-visible {
+  outline: 2px solid var(--purple-400);
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar for webkit browsers */
+.projects-grid.home-data-structures::-webkit-scrollbar {
+  height: 8px;
+}
+
+.projects-grid.home-data-structures::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 4px;
+}
+
+.projects-grid.home-data-structures::-webkit-scrollbar-thumb {
+  background: var(--purple-400);
+  border-radius: 4px;
+}
+
+.projects-grid.home-data-structures::-webkit-scrollbar-thumb:hover {
+  background: var(--purple-600);
+}
+
+/* Medium screens - 2 columns */
+@media (max-width: 1024px) {
+  .projects-grid.data-structures {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: none;
+    margin: 2rem 0 0;
+  }
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -577,6 +723,23 @@
     margin-top: 1.5rem;
   }
 
+  .projects-grid.data-structures {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: none;
+    margin: 1.5rem 0 0;
+    gap: 1.5rem;
+  }
+
+  .projects-grid.home-data-structures {
+    gap: 1.25rem;
+    padding: 0.75rem 0;
+  }
+
+  .projects-grid.home-data-structures .project-card {
+    min-width: 260px;
+    max-width: 300px;
+  }
+
   .skills-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -604,5 +767,20 @@
 @media (max-width: 520px) {
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+
+  .projects-grid.data-structures {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .projects-grid.home-data-structures {
+    gap: 1rem;
+    padding: 0.5rem 0;
+  }
+
+  .projects-grid.home-data-structures .project-card {
+    min-width: 240px;
+    max-width: 280px;
   }
 }
