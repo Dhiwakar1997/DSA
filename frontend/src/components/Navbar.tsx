@@ -36,6 +36,16 @@ const Navbar: React.FC = () => {
           </li>
           <li className="nav-item">
             <Link
+              to="/achievements"
+              className={`nav-link ${
+                location.pathname === "/achievements" ? "active" : ""
+              }`}
+            >
+              Achievements
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
               to="/certificates"
               className={`nav-link ${
                 location.pathname === "/certificates" ? "active" : ""
