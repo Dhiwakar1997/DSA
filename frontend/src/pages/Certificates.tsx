@@ -15,96 +15,102 @@ const Certificates: React.FC = () => {
   const certificates: Certificate[] = [
     {
       id: "1",
-      name: "Coursera Certificate 1",
-      filename: "Coursera 9ZQ87WV6VNE7.pdf",
-      category: "coursera",
-      description: "Coursera online course completion certificate",
+      name: "Data Structures",
+      filename: "Data Structures.pdf",
+      category: "computer-science",
+      description: "Data Structures and Algorithms certification",
     },
     {
       id: "2",
-      name: "Coursera Certificate 2",
-      filename: "Coursera JKYQACG4V7HP.pdf",
-      category: "coursera",
-      description: "Coursera online course completion certificate",
+      name: "AZ-204 Azure Developer Associate (Training)",
+      filename: "AZ 204 Azure.pdf",
+      category: "cloud",
+      description: "Microsoft Azure Developer Associate certification",
     },
     {
       id: "3",
-      name: "Cloud Fundamentals",
-      filename: "cloud fundamentals.pdf",
-      category: "cloud",
-      description: "Cloud computing fundamentals certification",
+      name: ".NET MAUI",
+      filename: "dotNET MAUI.pdf",
+      category: "programming",
+      description: ".NET Multi-platform App UI development certification",
     },
     {
       id: "4",
+      name: "Google Cloud Fundamentals (Training)",
+      filename: "Google Cloud Fundamentals.pdf",
+      category: "cloud",
+      description: "Google Cloud Platform fundamentals certification",
+    },
+    {
+      id: "5",
       name: "CSS Certificate",
       filename: "CSS_Certificate.pdf",
       category: "web",
       description: "CSS styling and design certification",
     },
     {
-      id: "5",
+      id: "6",
       name: "Docker Certificate",
       filename: "Docker_Certificate.pdf",
       category: "devops",
       description: "Docker containerization certification",
     },
     {
-      id: "6",
+      id: "7",
       name: "Django & React Certificate",
       filename: "Django&React_Certificate.pdf",
       category: "web",
       description: "Full-stack development with Django and React",
     },
     {
-      id: "7",
+      id: "8",
       name: "JavaScript Certificate",
       filename: "Javascript_Certificate.pdf",
       category: "web",
       description: "JavaScript programming certification",
     },
     {
-      id: "8",
+      id: "9",
       name: "Machine Learning Specialization",
-      filename: "ML_specialization (2).pdf",
+      filename: "ML_specialization.pdf",
       category: "ai-ml",
       description: "Machine learning specialization certification",
     },
     {
-      id: "9",
+      id: "10",
       name: "PostgreSQL Certificate",
       filename: "PostgresSQL Certificate.pdf",
       category: "database",
       description: "PostgreSQL database management certification",
     },
     {
-      id: "10",
+      id: "11",
       name: "Python Certificate",
       filename: "Python_Certificate.pdf",
       category: "programming",
       description: "Python programming certification",
     },
     {
-      id: "11",
+      id: "12",
       name: "UI/UX Course Certificate",
       filename: "UI-UX-Course-Certificate (1).pdf",
       category: "design",
       description: "User interface and user experience design certification",
-    },
-    {
-      id: "12",
-      name: "UC Certificate",
-      filename: "UC-9b9354d0-5a61-461c-8531-26d8a489d1d6.pdf",
-      category: "general",
-      description: "UC course completion certificate",
     },
   ];
 
   const categories = [
     { id: "all", name: "All Certificates", count: certificates.length },
     {
-      id: "coursera",
-      name: "Coursera",
-      count: certificates.filter((c) => c.category === "coursera").length,
+      id: "computer-science",
+      name: "Computer Science",
+      count: certificates.filter((c) => c.category === "computer-science")
+        .length,
+    },
+    {
+      id: "cloud",
+      name: "Cloud Computing",
+      count: certificates.filter((c) => c.category === "cloud").length,
     },
     {
       id: "web",
@@ -132,19 +138,9 @@ const Certificates: React.FC = () => {
       count: certificates.filter((c) => c.category === "devops").length,
     },
     {
-      id: "cloud",
-      name: "Cloud",
-      count: certificates.filter((c) => c.category === "cloud").length,
-    },
-    {
       id: "design",
       name: "Design",
       count: certificates.filter((c) => c.category === "design").length,
-    },
-    {
-      id: "general",
-      name: "General",
-      count: certificates.filter((c) => c.category === "general").length,
     },
   ];
 
@@ -155,8 +151,10 @@ const Certificates: React.FC = () => {
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case "coursera":
-        return "🎓";
+      case "computer-science":
+        return "🧮";
+      case "cloud":
+        return "☁️";
       case "web":
         return "🌐";
       case "programming":
@@ -167,12 +165,8 @@ const Certificates: React.FC = () => {
         return "🗄️";
       case "devops":
         return "⚙️";
-      case "cloud":
-        return "☁️";
       case "design":
         return "🎨";
-      case "general":
-        return "📜";
       default:
         return "📜";
     }
