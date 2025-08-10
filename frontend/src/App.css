@@ -519,9 +519,19 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .hero {
+    transform: translateY(0.5%);
+  }
+
   .hero-header {
     flex-direction: column;
     gap: 14px;
+  }
+
+  .hero-avatar {
+    transform: translateY(20%);
+    width: 112px; /* Reduced by 30% from 160px */
+    height: 112px; /* Reduced by 30% from 160px */
   }
 
   .hero-text {
