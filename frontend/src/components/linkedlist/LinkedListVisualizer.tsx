@@ -7,18 +7,14 @@ function useRemoteDll(initial: DllList = [1, 2, 3]) {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const [lastInfo, setLastInfo] = useState<string | null>(null);
-  const [lastLatencyMs, setLastLatencyMs] = useState<number | null>(null);
 
   const run = async <T,>(fn: () => Promise<T>, onOk?: (res: any) => void) => {
     setLoading(true);
     setError(null);
     setLastInfo(null);
-    setLastLatencyMs(null);
+
     try {
-      const start = performance.now();
       const res: any = await fn();
-      const end = performance.now();
-      setLastLatencyMs(Math.round(end - start));
       if (res && Object.prototype.hasOwnProperty.call(res, "list")) {
         setList((res as { list: DllList }).list);
       }
@@ -39,7 +35,7 @@ function useRemoteDll(initial: DllList = [1, 2, 3]) {
     loading,
     error,
     lastInfo,
-    lastLatencyMs,
+
     create: (initialList: DllList) => run(() => dllApi.create(initialList)),
     append: (value: number) => run(() => dllApi.append(list, value)),
     prepend: (value: number) => run(() => dllApi.prepend(list, value)),
@@ -135,19 +131,12 @@ export default function LinkedListVisualizer() {
 
       <div className="llv-meta">
         <span>Length: {nodes.length}</span>
-        {api.loading ? (
-          <span style={{ marginLeft: 12 }}>Loading...</span>
-        ) : null}
+
         {api.error ? (
           <span style={{ marginLeft: 12, color: "crimson" }}>{api.error}</span>
         ) : null}
         {api.lastInfo ? (
           <span style={{ marginLeft: 12, color: "teal" }}>{api.lastInfo}</span>
-        ) : null}
-        {api.lastLatencyMs != null ? (
-          <span style={{ marginLeft: 12, color: "#555" }}>
-            Response: {api.lastLatencyMs} ms
-          </span>
         ) : null}
       </div>
 
