@@ -17,24 +17,29 @@
   --purple-700: #6d28d9;
 
   --bg: linear-gradient(135deg, #8076f8 0%, #7c3aed 100%);
-  --surface: #ffffff; /* solid surface to remove glass effect */
-  --surface-muted: #ffffff; /* solid surface (no translucency) */
-  --text-strong: #1f1147;
-  --text-primary: rgba(31, 17, 71, 0.85);
-  --text-secondary: rgba(31, 17, 71, 0.65);
+  --surface: #f5f0e8; /* darker creamish surface */
+  --surface-muted: #ede6d8; /* darker muted surface */
+  --text-strong: #1a0f2e; /* much darker text color */
+  --text-primary: rgba(26, 15, 46, 0.9); /* darker text primary */
+  --text-secondary: rgba(26, 15, 46, 0.75); /* darker text secondary */
 
-  --navbar-bg: rgba(255, 255, 255, 0.12);
+  --navbar-bg: rgba(
+    245,
+    240,
+    232,
+    0.15
+  ); /* darker creamish navbar background */
   --navbar-border: rgba(255, 255, 255, 0.24);
-  --logo-gradient: linear-gradient(45deg, #fff, #ede9fe);
+  --logo-gradient: linear-gradient(45deg, #f5f0e8, #ede6d8);
   --link-hover-bg: rgba(255, 255, 255, 0.12);
   --link-active-bg: rgba(255, 255, 255, 0.2);
   --toggle-bg: rgba(255, 255, 255, 0.2);
   --toggle-border: rgba(255, 255, 255, 0.35);
 
-  --card-bg: #ffffff;
-  --card-border: rgba(139, 92, 246, 0.15);
-  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  --card-shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.12);
+  --card-bg: #f5f0e8; /* darker creamish card background */
+  --card-border: rgba(139, 92, 246, 0.2); /* slightly stronger border */
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); /* stronger shadows */
+  --card-shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.18); /* stronger hover shadows */
   --card-title: var(--purple-600);
   --link: var(--purple-600);
   --link-hover: var(--violet-800);
