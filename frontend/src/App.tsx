@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
@@ -9,8 +9,14 @@ import Certificates from "./pages/Certificates";
 import Achievements from "./pages/Achievements";
 import About from "./pages/About";
 import { ThemeProvider } from "./context/ThemeContext";
+import { wakeUpBackend } from "./services/backendApi";
 
 function App() {
+  // Wake up backend server when app loads
+  useEffect(() => {
+    wakeUpBackend();
+  }, []);
+
   return (
     <Router>
       <ThemeProvider>

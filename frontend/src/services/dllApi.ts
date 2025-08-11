@@ -1,3 +1,5 @@
+import { BACKEND_URL } from "./backendApi";
+
 export type DllList = number[];
 
 export interface DllResponseBase {
@@ -13,10 +15,9 @@ export interface DllGetResponse extends DllResponseBase {
   get_item?: number;
 }
 
-// Use environment variable for API URL, fallback to relative path for development
-const BASE_URL: string = process.env.REACT_APP_API_URL
-  ? `${process.env.REACT_APP_API_URL}/DLL/v1`
-  : "/DLL/v1";
+
+// Use centralized backend URL configuration
+const BASE_URL: string = `${BACKEND_URL}/DLL/v1`;
 
 async function postJson<TResponse>(
   path: string,
