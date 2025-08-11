@@ -1,7 +1,7 @@
 // Backend API configuration and utility functions
 
 // Backend URL - change this to your actual backend URL when deployed
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || 'http://127.0.0.1:5000';
+const BACKEND_URL = process.env.REACT_APP_API_URL || 'http://127.0.0.1:5000';
 
 /**
  * Wakes up the backend server by making a request to the root endpoint
