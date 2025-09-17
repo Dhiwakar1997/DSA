@@ -108,14 +108,6 @@ function getNodeHueFromValue(n: number): number {
   return 265 + t * 30; // 265°..295°
 }
 
-function readCssVar(varName: string, fallback: string): string {
-  if (typeof window === "undefined") return fallback;
-  const val = getComputedStyle(document.documentElement)
-    .getPropertyValue(varName)
-    .trim();
-  return val || fallback;
-}
-
 function getAccentColor(theme: "light" | "dark"): string {
   // Use fixed, theme-driven accents to avoid timing issues with CSS variable propagation
   return theme === "dark" ? "#c4b5fd" : "#7c3aed";
@@ -145,10 +137,7 @@ function getNodeBgColor(
   return { color: `hsl(${hue}, 68%, ${lightness}%)`, lightness };
 }
 
-function getContrastingTextColor(bgLightness: number, theme: "light" | "dark"): string {
-  // Simplify: always white text on dark theme, dark text on light theme
-  return theme === "dark" ? "#fafafa" : "#111827";
-}
+//
 
 function buildVisGraph(
   root: TreeNode | null,
@@ -333,7 +322,7 @@ export default function BSTVisualizer() {
     const { nodes, edges } = visData;
     networkRef.current.setData({ nodes: nodes as any, edges: edges as any } as any);
     networkRef.current.redraw();
-  }, [theme]);
+  }, [theme, visData]);
 
   useEffect(() => {
     // refit on container size changes
