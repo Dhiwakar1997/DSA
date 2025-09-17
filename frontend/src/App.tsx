@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import LinkedListPage from "./pages/LinkedListPage";
 import Projects from "./pages/Projects";
+import BSTPage from "./pages/BSTPage";
 import Certificates from "./pages/Certificates";
 import Achievements from "./pages/Achievements";
 import About from "./pages/About";
@@ -26,6 +27,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/linkedlist" element={<LinkedListPage />} />
+              <Route path="/bst" element={<BSTPage />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/achievements" element={<Achievements />} />
               <Route path="/certificates" element={<Certificates />} />

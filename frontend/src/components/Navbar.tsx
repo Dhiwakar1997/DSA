@@ -95,6 +95,17 @@ const Navbar: React.FC = () => {
               About Me
             </Link>
           </li>
+          <li className="nav-item">
+            <Link
+              to="/bst"
+              className={`nav-link ${
+                location.pathname === "/bst" ? "active" : ""
+              }`}
+              onClick={closeMenu}
+            >
+              BST
+            </Link>
+          </li>
         </ul>
         <button
           aria-label="Toggle theme"

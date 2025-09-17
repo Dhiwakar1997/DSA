@@ -1,0 +1,103 @@
+.bstv-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bstv-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bstv-create,
+.bstv-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.bstv-info {
+  margin-left: 8px;
+  color: teal;
+}
+
+.bstv-error {
+  margin-left: 8px;
+  color: crimson;
+}
+
+.bstv-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  min-height: 380px;
+}
+
+.bstv-tree {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  overflow: auto;
+}
+
+.tree-levels {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tree-level {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(42px, 1fr);
+  gap: 8px;
+}
+
+.tree-node {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #6b5b95;
+  color: #fff;
+  font-weight: 600;
+}
+
+.spacer {
+  width: 42px;
+  height: 42px;
+}
+
+.bstv-lists {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.list-block {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 8px 12px;
+  background: #fafafa;
+}
+
+.list-block h4 {
+  margin: 0 0 6px 0;
+}
+
+.list-scroll {
+  max-height: 80px;
+  overflow-y: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
