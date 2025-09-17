@@ -19,14 +19,15 @@ export interface DllGetResponse extends DllResponseBase {
 // Use centralized backend URL configuration
 const BASE_URL: string = `${BACKEND_URL}/DLL/v1`;
 
-async function postJson<TResponse>(
+async function requestJson<TResponse>(
   path: string,
-  body: unknown
+  method: "GET" | "POST" | "PUT" | "DELETE",
+  body?: unknown
 ): Promise<TResponse> {
   const res = await fetch(`${BASE_URL}${path}`, {
-    method: "POST",
+    method,
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(body),
+    body: body !== undefined ? JSON.stringify(body) : undefined,
   });
   if (!res.ok) {
     const text = await res.text().catch(() => "");
@@ -37,33 +38,34 @@ async function postJson<TResponse>(
 
 export const dllApi = {
   create(list: DllList) {
-    return postJson<DllResponseBase>("/create", { list });
+    return requestJson<DllResponseBase>("/create", "POST", { list });
   },
   append(list: DllList, value: number) {
-    return postJson<DllResponseBase>("/append", { list, value });
+    return requestJson<DllResponseBase>("/append", "PUT", { list, value });
   },
   prepend(list: DllList, value: number) {
-    return postJson<DllResponseBase>("/prepend", { list, value });
+    return requestJson<DllResponseBase>("/prepend", "PUT", { list, value });
   },
   insert(list: DllList, index: number, value: number) {
-    return postJson<DllResponseBase>("/insert", { list, index, value });
+    return requestJson<DllResponseBase>("/insert", "PUT", { list, index, value });
   },
   remove(list: DllList, index: number) {
-    return postJson<DllResponseBase>("/remove", { list, index });
+    return requestJson<DllResponseBase>("/remove", "DELETE", { list, index });
   },
   reverse(list: DllList) {
-    return postJson<DllResponseBase>("/reverse", { list });
+    return requestJson<DllResponseBase>("/reverse", "PUT", { list });
   },
   pop(list: DllList) {
-    return postJson<DllPopResponse>("/pop", { list });
+    return requestJson<DllPopResponse>("/pop", "DELETE", { list });
   },
   popFirst(list: DllList) {
-    return postJson<DllPopResponse>("/pop_first", { list });
+    return requestJson<DllPopResponse>("/pop_first", "DELETE", { list });
   },
   setValue(list: DllList, index: number, value: number) {
-    return postJson<DllResponseBase>("/set", { list, index, value });
+    return requestJson<DllResponseBase>("/set", "PUT", { list, index, value });
   },
   getValue(list: DllList, index: number) {
-    return postJson<DllGetResponse>("/get", { list, index });
+    // Backend expects GET with JSON body according to DLL_Route.py
+    return requestJson<DllGetResponse>("/get", "GET", { list, index });
   },
 };
