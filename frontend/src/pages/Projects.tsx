@@ -15,7 +15,8 @@ const Projects: React.FC = () => {
       id: "bst",
       title: "🌳 Binary Search Tree",
       description: "BST operations and traversals visualization.",
-      status: "planned",
+      status: "completed",
+      link: "/bst",
     },
     {
       id: "sorting",

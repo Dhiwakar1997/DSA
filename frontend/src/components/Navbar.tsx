@@ -95,6 +95,7 @@ const Navbar: React.FC = () => {
               About Me
             </Link>
           </li>
+          
         </ul>
         <button
           aria-label="Toggle theme"

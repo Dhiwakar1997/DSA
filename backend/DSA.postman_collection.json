@@ -24,15 +24,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:5000/DLL/v1/create",
-							"protocol": "http",
+							"raw": "{{Endpoint}}/DLL/v1/create",
 							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
+								"{{Endpoint}}"
 							],
-							"port": "5000",
 							"path": [
 								"DLL",
 								"v1",
@@ -45,7 +40,7 @@
 				{
 					"name": "Prepend",
 					"request": {
-						"method": "POST",
+						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
@@ -57,15 +52,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:5000/DLL/v1/prepend",
-							"protocol": "http",
+							"raw": "{{Endpoint}}/DLL/v1/prepend",
 							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
+								"{{Endpoint}}"
 							],
-							"port": "5000",
 							"path": [
 								"DLL",
 								"v1",
@@ -78,7 +68,7 @@
 				{
 					"name": "Append",
 					"request": {
-						"method": "POST",
+						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
@@ -90,15 +80,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:5000/DLL/v1/append",
-							"protocol": "http",
+							"raw": "{{Endpoint}}/DLL/v1/append",
 							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
+								"{{Endpoint}}"
 							],
-							"port": "5000",
 							"path": [
 								"DLL",
 								"v1",
@@ -111,7 +96,7 @@
 				{
 					"name": "Pop",
 					"request": {
-						"method": "POST",
+						"method": "DELETE",
 						"header": [],
 						"body": {
 							"mode": "raw",
@@ -123,15 +108,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:5000/DLL/v1/pop",
-							"protocol": "http",
+							"raw": "{{Endpoint}}/DLL/v1/pop",
 							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
+								"{{Endpoint}}"
 							],
-							"port": "5000",
 							"path": [
 								"DLL",
 								"v1",
@@ -144,7 +124,7 @@
 				{
 					"name": "Pop First",
 					"request": {
-						"method": "POST",
+						"method": "DELETE",
 						"header": [],
 						"body": {
 							"mode": "raw",
@@ -156,19 +136,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:5000/DLL/v1/pop",
-							"protocol": "http",
+							"raw": "{{Endpoint}}/DLL/v1/pop_first",
 							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
+								"{{Endpoint}}"
 							],
-							"port": "5000",
 							"path": [
 								"DLL",
 								"v1",
-								"pop"
+								"pop_first"
 							]
 						}
 					},
@@ -177,7 +152,7 @@
 				{
 					"name": "Insert",
 					"request": {
-						"method": "POST",
+						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
@@ -210,11 +185,11 @@
 				{
 					"name": "Remove",
 					"request": {
-						"method": "POST",
+						"method": "DELETE",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"list\":[1,2,3,4,9,54,6]}",
+							"raw": "{\"list\":[1,2,3,4,9,54,6],\"index\":3}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -222,19 +197,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:5000/DLL/v1/pop",
-							"protocol": "http",
+							"raw": "{{Endpoint}}/DLL/v1/remove",
 							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
+								"{{Endpoint}}"
 							],
-							"port": "5000",
 							"path": [
 								"DLL",
 								"v1",
-								"pop"
+								"remove"
 							]
 						}
 					},
@@ -243,7 +213,7 @@
 				{
 					"name": "Reverse",
 					"request": {
-						"method": "POST",
+						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
@@ -255,19 +225,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:5000/DLL/v1/pop",
-							"protocol": "http",
+							"raw": "{{Endpoint}}/DLL/v1/reverse",
 							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
+								"{{Endpoint}}"
 							],
-							"port": "5000",
 							"path": [
 								"DLL",
 								"v1",
-								"pop"
+								"reverse"
 							]
 						}
 					},
@@ -276,11 +241,11 @@
 				{
 					"name": "Set",
 					"request": {
-						"method": "POST",
+						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"list\":[1,2,3,4,9,54,6]}",
+							"raw": "{\"list\":[1,2,3,4,9,54,6],\"value\":43,\"index\":1}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -288,19 +253,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:5000/DLL/v1/pop",
-							"protocol": "http",
+							"raw": "{{Endpoint}}/DLL/v1/set",
 							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
+								"{{Endpoint}}"
 							],
-							"port": "5000",
 							"path": [
 								"DLL",
 								"v1",
-								"pop"
+								"set"
 							]
 						}
 					},
@@ -308,6 +268,134 @@
 				},
 				{
 					"name": "Get",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"list\":[1,2,3,4,9,54,6],\"index\":6}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Endpoint}}/DLL/v1/get",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"DLL",
+								"v1",
+								"get"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BST Local",
+			"item": [
+				{
+					"name": "Insert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"list\":[4,45,6],\"value\":7}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LocalEndpoint}}/BST/v1/insert",
+							"host": [
+								"{{LocalEndpoint}}"
+							],
+							"path": [
+								"BST",
+								"v1",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "contains",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"list\":[4,45,6],\"value\":6}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LocalEndpoint}}/BST/v1/contains",
+							"host": [
+								"{{LocalEndpoint}}"
+							],
+							"path": [
+								"BST",
+								"v1",
+								"contains"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"list\":[4,45,6,7],\"value\":7}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LocalEndpoint}}/BST/v1/remove",
+							"host": [
+								"{{LocalEndpoint}}"
+							],
+							"path": [
+								"BST",
+								"v1",
+								"remove"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DSA Local",
+			"item": [
+				{
+					"name": "Create",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -321,19 +409,269 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:5000/DLL/v1/pop",
-							"protocol": "http",
+							"raw": "{{Endpoint}}/DLL/v1/create",
 							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
+								"{{Endpoint}}"
 							],
-							"port": "5000",
+							"path": [
+								"DLL",
+								"v1",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Prepend",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"list\":[1,2,3,4,9,54,6],\"value\":67}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LocalEndpoint}}/DLL/v1/prepend",
+							"host": [
+								"{{LocalEndpoint}}"
+							],
+							"path": [
+								"DLL",
+								"v1",
+								"prepend"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Append",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"list\":[1,2,3,4,9,54,6],\"value\":67}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LocalEndpoint}}/DLL/v1/append",
+							"host": [
+								"{{LocalEndpoint}}"
+							],
+							"path": [
+								"DLL",
+								"v1",
+								"append"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pop",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"list\":[1,2,3,4,9,54,6]}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LocalEndpoint}}/DLL/v1/pop",
+							"host": [
+								"{{LocalEndpoint}}"
+							],
 							"path": [
 								"DLL",
 								"v1",
 								"pop"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pop First",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"list\":[1,2,3,4,9,54,6]}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LocalEndpoint}}/DLL/v1/pop_first",
+							"host": [
+								"{{LocalEndpoint}}"
+							],
+							"path": [
+								"DLL",
+								"v1",
+								"pop_first"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"list\":[1,2,3,4,9,54,6],\"value\":9,\"index\":2}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LocalEndpoint}}/DLL/v1/insert",
+							"host": [
+								"{{LocalEndpoint}}"
+							],
+							"path": [
+								"DLL",
+								"v1",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"list\":[1,2,3,4,9,54,6],\"index\":3}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LocalEndpoint}}/DLL/v1/remove",
+							"host": [
+								"{{LocalEndpoint}}"
+							],
+							"path": [
+								"DLL",
+								"v1",
+								"remove"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reverse",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"list\":[1,2,3,4,9,54,6]}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LocalEndpoint}}/DLL/v1/reverse",
+							"host": [
+								"{{LocalEndpoint}}"
+							],
+							"path": [
+								"DLL",
+								"v1",
+								"reverse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"list\":[1,2,3,4,9,54,6],\"value\":43,\"index\":1}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LocalEndpoint}}/DLL/v1/set",
+							"host": [
+								"{{LocalEndpoint}}"
+							],
+							"path": [
+								"DLL",
+								"v1",
+								"set"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"list\":[1,2,3,4,9,54,6],\"index\":6}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LocalEndpoint}}/DLL/v1/get",
+							"host": [
+								"{{LocalEndpoint}}"
+							],
+							"path": [
+								"DLL",
+								"v1",
+								"get"
 							]
 						}
 					},

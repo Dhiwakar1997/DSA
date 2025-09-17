@@ -270,6 +270,24 @@
   background-clip: text;
 }
 
+/* Ensure title is readable in light theme by using a solid accent color */
+:root[data-theme="light"] .page-title {
+  color: transparent;
+  background: linear-gradient(45deg, #9400D3 0%, #B266FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Keep gradient text in dark mode for visual flair */
+:root[data-theme="dark"] .page-title {
+  color: transparent;
+  background: linear-gradient(45deg, var(--purple-500), var(--violet-400));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 /* Projects Grid -> minimal responsive tiles */
 .projects-grid {
   display: grid;

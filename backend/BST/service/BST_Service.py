@@ -7,11 +7,13 @@ class Node:
     def __str__(self):
         return f'{self.value}'
 
-class BTS:
+class BST:
 
-    def __init__(self):
+    def __init__(self,BST_list: list):
         self.root = None
         self.depth = 0
+        for i in BST_list:
+            self.insert(i)
     
     def insert(self,value):
         new_node = Node(value)
@@ -174,17 +176,3 @@ class BTS:
 
         traverse(self.root)
         return result
-
-myTree = BTS()
-
-myTree.insert(47)
-myTree.insert(21)
-myTree.insert(76)
-myTree.insert(18)
-myTree.insert(27)
-myTree.insert(52)
-myTree.insert(82)
-print(myTree.BFS())
-print(myTree.dfs_Pre_Order())
-print(myTree.dfs_Post_Order())
-print(myTree.dfs_In_Order())

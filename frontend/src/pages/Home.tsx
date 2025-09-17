@@ -123,11 +123,11 @@ const Home: React.FC = () => {
             <span className="project-link">Try Demo →</span>
           </Link>
 
-          <div className="project-card clickable-card coming-soon">
+          <Link to="/bst" className="project-card clickable-card">
             <h3>🌳 Binary Search Tree</h3>
             <p>BST operations and traversals visualization.</p>
-            <span className="project-link">Coming Soon</span>
-          </div>
+            <span className="project-link">Try Demo →</span>
+          </Link>
 
           <div className="project-card clickable-card coming-soon">
             <h3>🔍 Sorting Algorithms</h3>

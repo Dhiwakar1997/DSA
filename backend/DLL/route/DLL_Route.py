@@ -72,20 +72,20 @@ def get_value():
 
 DLL_app.add_url_rule("/create", endpoint='create-dll', view_func=create_list, methods=['POST'])
 
-DLL_app.add_url_rule("/append", endpoint='append-dll', view_func=append, methods=['POST'])
+DLL_app.add_url_rule("/append", endpoint='append-dll', view_func=append, methods=['PUT'])
 
-DLL_app.add_url_rule("/prepend", endpoint='prepend-dll', view_func=prepend, methods=['POST'])
+DLL_app.add_url_rule("/prepend", endpoint='prepend-dll', view_func=prepend, methods=['PUT'])
 
-DLL_app.add_url_rule("/pop", endpoint='pop-dll', view_func=pop, methods=['POST'])
+DLL_app.add_url_rule("/pop", endpoint='pop-dll', view_func=pop, methods=['DELETE'])
 
-DLL_app.add_url_rule("/pop_first", endpoint='pop-first-dll', view_func=pop_first, methods=['POST'])
+DLL_app.add_url_rule("/pop_first", endpoint='pop-first-dll', view_func=pop_first, methods=['DELETE'])
 
-DLL_app.add_url_rule("/insert", endpoint='insert-dll', view_func=insert, methods=['POST'])
+DLL_app.add_url_rule("/insert", endpoint='insert-dll', view_func=insert, methods=['PUT'])
 
-DLL_app.add_url_rule("/remove", endpoint='remove-dll', view_func=remove, methods=['POST'])
+DLL_app.add_url_rule("/remove", endpoint='remove-dll', view_func=remove, methods=['DELETE'])
 
-DLL_app.add_url_rule("/reverse", endpoint='reverse-dll', view_func=reverse, methods=['POST'])
+DLL_app.add_url_rule("/reverse", endpoint='reverse-dll', view_func=reverse, methods=['PUT'])
 
-DLL_app.add_url_rule("/set", endpoint='set-dll', view_func=set_value, methods=['POST'])
+DLL_app.add_url_rule("/set", endpoint='set-dll', view_func=set_value, methods=['PUT'])
 
-DLL_app.add_url_rule("/get", endpoint='get-dll', view_func=get_value, methods=['POST'])
+DLL_app.add_url_rule("/get", endpoint='get-dll', view_func=get_value, methods=['GET'])

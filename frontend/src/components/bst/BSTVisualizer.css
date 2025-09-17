@@ -1,0 +1,279 @@
+.bstv-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  align-items: flex-end;
+  margin-top: -5vh; /* move container 5% upward */
+}
+
+/* Move page title up by the same amount */
+.bst-page .page-title {
+  margin-top: -8vh;
+}
+
+.bstv-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bstv-create,
+.bstv-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.bstv-controls .field-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.bstv-status {
+  padding: 6px 10px;
+  border-left: 4px solid currentColor;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.03);
+  font-weight: 600;
+}
+.bstv-status.ok {
+  color: #059669; /* green-600 */
+}
+.bstv-status.bad {
+  color: #dc2626; /* red-600 */
+}
+
+.bstv-controls .button-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+/* Mirror DLL page aesthetics */
+/* Create block styling similar to .llv-create */
+.bstv-create {
+  gap: 10px;
+  margin: 5vh 0 4px;
+  padding: 16px 20px;
+  border-radius: 16px;
+}
+
+.bstv-create input {
+  height: 38px;
+  padding: 8px 12px;
+  border: 1px solid var(--card-border, #d0d7e2);
+  background: var(--card-bg, #ffffff);
+  border-radius: 10px;
+  width: 260px;
+  max-width: 60vw;
+  font-size: 14px;
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+  color: var(--text-primary, #333);
+}
+
+.bstv-create input::placeholder {
+  color: var(--text-secondary, #666);
+}
+
+.bstv-create input:focus {
+  outline: none;
+  border-color: var(--card-border, #d0d7e2);
+  box-shadow: none;
+}
+
+.bstv-create button {
+  height: 38px;
+  padding: 0 16px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(124, 58, 237, 0.35),
+    0 0 0 2px rgba(167, 139, 250, 0.25);
+  transition: filter 120ms ease, transform 80ms ease, box-shadow 150ms ease;
+}
+
+.bstv-create button:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(124, 58, 237, 0.45),
+    0 0 0 3px rgba(167, 139, 250, 0.35);
+}
+
+.bstv-create button:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 16px rgba(124, 58, 237, 0.35),
+    0 0 0 2px rgba(167, 139, 250, 0.25);
+}
+
+.bstv-create button:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Controls styling similar to .llv-controls */
+.bstv-controls input {
+  padding: 8px 10px;
+  border: 1px solid var(--card-border, #ddd);
+  border-radius: 6px;
+  width: 140px;
+  background: var(--card-bg, #ffffff);
+  color: var(--text-primary, #333);
+}
+
+.bstv-controls input::placeholder {
+  color: var(--text-secondary, #666);
+}
+
+.bstv-controls button {
+  padding: 8px 12px;
+  border: 1px solid var(--card-border, #ccc);
+  background: var(--card-bg, #f7f7f7);
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--text-primary, #333);
+  transition: background-color 160ms ease, border-color 160ms ease,
+    color 160ms ease, transform 120ms ease, box-shadow 160ms ease;
+  will-change: transform, box-shadow;
+}
+
+.bstv-controls button:hover {
+  background: linear-gradient(135deg, #ffffff 0%, #f3edff 100%);
+  border-color: rgba(124, 58, 237, 0.45);
+  color: var(--text-strong, #1f1147);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.bstv-controls button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.bstv-controls button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.35);
+}
+
+.bstv-controls button:disabled,
+.bstv-controls button[disabled] {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.bstv-info {
+  margin-left: 8px;
+  color: teal;
+}
+
+.bstv-error {
+  margin-left: 8px;
+  color: crimson;
+}
+
+.bstv-content {
+  display: grid;
+  grid-template-columns: 66vw minmax(0, 1fr); /* left tree, right controls (no overflow) */
+  gap: 16px;
+  min-height: 380px;
+  height: 80vh; /* define a responsive height so children can size in % */
+  width: 100%;
+}
+
+.bstv-left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0; /* allow shrink within grid to avoid overflow */
+}
+
+/* Pin the value field and action buttons to the bottom of the right pane */
+.bstv-left .bstv-controls {
+  margin-top: auto;
+  margin-bottom: 8vh; /* move up by 8% of viewport height */
+}
+
+.bstv-tree {
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  overflow: auto;
+  height: 95%; /* 5% less than the bstv-content height */
+  box-sizing: border-box;
+}
+
+.tree-levels {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tree-level {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(42px, 1fr);
+  gap: 8px;
+}
+
+.tree-node {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #6b5b95;
+  color: #fff;
+  font-weight: 600;
+}
+
+.spacer {
+  width: 42px;
+  height: 42px;
+}
+
+.bstv-lists {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.list-block {
+  border: 1px solid var(--card-border, #e5e7eb);
+  border-radius: 12px;
+  padding: 10px 14px;
+  background: var(--card-bg, #ffffff);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.list-block h4 {
+  margin: 0 0 6px 0;
+  color: var(--text-secondary, #6b7280);
+}
+
+.list-scroll {
+  max-height: 80px;
+  overflow-y: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  color: var(--text-primary, #111827);
+}
