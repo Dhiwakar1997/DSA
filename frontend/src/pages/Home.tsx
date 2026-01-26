@@ -22,9 +22,14 @@ const Home: React.FC = () => {
       </p>
 
       <div className="hero-buttons">
-        <Link to="/projects" className="btn btn-primary">
-          Explore Data Structures
-        </Link>
+        <a
+          href="https://www.readmybook.online/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-primary"
+        >
+          📖 Try ReadMyBook
+        </a>
         <a
           href="https://github.com/Dhiwakar1997"
           target="_blank"
@@ -108,6 +113,104 @@ const Home: React.FC = () => {
               <span className="skill-tag">Azure</span>
               <span className="skill-tag">UiPath</span>
             </div>
+          </div>
+        </div>
+
+        {/* ReadMyBook Featured Project */}
+        <div className="featured-project-section">
+          <span className="featured-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+            </svg>
+            Featured Project
+          </span>
+
+          <div className="app-showcase-header">
+            <div className="app-icon-container">
+              <span className="app-icon">📖</span>
+            </div>
+            <div className="app-info">
+              <h3 className="app-title">ReadMyBook</h3>
+              <p className="app-tagline">
+                Your intelligent PDF companion — Read, Listen &amp; Learn
+              </p>
+              <p className="app-description">
+                A mobile PDF reader app that transforms how you interact with
+                books. Listen to any PDF with on-device TTS (completely free),
+                understand words in context, and ask questions to an AI chatbot
+                powered by RAG technology.
+              </p>
+            </div>
+          </div>
+
+          <div className="app-features-grid">
+            <div className="app-feature-card">
+              <span className="feature-icon">🎧</span>
+              <h4 className="feature-title">Audio Book</h4>
+              <p className="feature-description">
+                On-device TTS models for free audiobook experience. Control
+                playback speed and touch to play.
+              </p>
+            </div>
+
+            <div className="app-feature-card">
+              <span className="feature-icon">📖</span>
+              <h4 className="feature-title">Dual Reading Views</h4>
+              <p className="feature-description">
+                Classic PDF viewer or Modern infinite scroll view with TTS
+                integration and seamless reading.
+              </p>
+            </div>
+
+            <div className="app-feature-card">
+              <span className="feature-icon">🤖</span>
+              <h4 className="feature-title">AI Chat</h4>
+              <p className="feature-description">
+                RAG-powered chatbot to ask questions about your book content and
+                get intelligent answers.
+              </p>
+            </div>
+
+            <div className="app-feature-card">
+              <span className="feature-icon">🔍</span>
+              <h4 className="feature-title">Word Inference</h4>
+              <p className="feature-description">
+                Long-press any word to get its meaning in the context of the
+                book you're reading.
+              </p>
+            </div>
+
+            <div className="app-feature-card">
+              <span className="feature-icon">⚙️</span>
+              <h4 className="feature-title">Customization</h4>
+              <p className="feature-description">
+                Adjust font size with pinch gesture. Customize theme, font
+                style, colors, and voice models.
+              </p>
+            </div>
+
+            <div className="app-feature-card">
+              <span className="feature-icon">📌</span>
+              <h4 className="feature-title">Bookmarks</h4>
+              <p className="feature-description">
+                Save your favorite sections and navigate easily. View your books
+                and shared books on home.
+              </p>
+            </div>
+          </div>
+
+          <div className="app-cta-section">
+            <a
+              href="https://www.readmybook.online/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="app-cta-button"
+            >
+              Try ReadMyBook
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
           </div>
         </div>
       </div>
